@@ -4,9 +4,42 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
+    <groupId>dev.drf.grpc.demo</groupId>
     <artifactId>grpc-proto-demo</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
+    <name>grpc proto demo</name>
+
+    <modules>
+        <module>grpc-proto-common</module>
+        <module>grpc-proto-server</module>
+        <module>grpc-proto-client</module>
+    </modules>
+
+    <properties>
+        <java.version>13</java.version>
+        <java.enable.preview>--enable-preview</java.enable.preview>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- TODO -->
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <release>${java.version}</release>
+                    <compilerArgs>${java.enable.preview}</compilerArgs>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
