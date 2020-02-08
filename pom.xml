@@ -20,11 +20,26 @@
     <properties>
         <java.version>13</java.version>
         <java.enable.preview>--enable-preview</java.enable.preview>
+        <grpc.version>1.27.0</grpc.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <!-- TODO -->
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-netty</artifactId>
+                <version>${grpc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-protobuf</artifactId>
+                <version>${grpc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-stub</artifactId>
+                <version>${grpc.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
