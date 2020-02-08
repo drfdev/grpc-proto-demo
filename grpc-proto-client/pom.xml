@@ -12,4 +12,12 @@
         <groupId>dev.drf.grpc.demo</groupId>
     </parent>
 
+    <dependencies>
+        <dependency>
+            <groupId>dev.drf.grpc.demo</groupId>
+            <artifactId>grpc-proto-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
 </project>
