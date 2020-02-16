@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package dev.drf.grpc.demo.dto;
+
+import "Status.proto";
+
+message Response {
+    Status status = 1;
+    string message = 2;
+    repeated Event errors = 3;
+}
+
+message Event {
+    string code = 1;
+    string message = 2;
+}

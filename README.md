@@ -7,3 +7,4 @@ grpc demo
 
 **grpc-proto-client**: proto client
 
+protobuf Idea plugin: https://plugins.jetbrains.com/plugin/8277-protobuf-support/versions

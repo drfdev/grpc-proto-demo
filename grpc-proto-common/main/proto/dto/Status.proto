@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package dev.drf.grpc.demo.dto;
+
+enum Status {
+    SUCCESS = 0;
+    ERROR = 1;
+}

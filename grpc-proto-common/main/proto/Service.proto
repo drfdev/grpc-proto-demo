@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package dev.drf.grpc.demo;
+
+import "dto/Request.proto";
+import "dto/Response.proto";
+
+service HelloService {
+    rpc hello(dev.drf.grpc.demo.dto.Request) returns (dev.drf.grpc.demo.dto.Response);
+}
