@@ -21,6 +21,14 @@
         <java.version>13</java.version>
         <java.enable.preview>--enable-preview</java.enable.preview>
         <grpc.version>1.27.0</grpc.version>
+        <protobuf.version>3.0.0-beta-1</protobuf.version>
+
+        <protobuf.input.directory>${project.basedir}/src/main/proto</protobuf.input.directory>
+        <protobuf.output.directory>${project.build.directory}/generated-sources</protobuf.output.directory>
+        <os-maven-plugin.version>1.4.1.Final</os-maven-plugin.version>
+        <maven-dependency-plugin.version>2.10</maven-dependency-plugin.version>
+        <maven-antrun-plugin.version>1.8</maven-antrun-plugin.version>
+        <build-helper-maven-plugin.version>1.9.1</build-helper-maven-plugin.version>
     </properties>
 
     <dependencyManagement>
@@ -39,6 +47,11 @@
                 <groupId>io.grpc</groupId>
                 <artifactId>grpc-stub</artifactId>
                 <version>${grpc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.protobuf</groupId>
+                <artifactId>protobuf-java</artifactId>
+                <version>${protobuf.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
