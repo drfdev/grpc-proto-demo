@@ -22,6 +22,7 @@
         <java.enable.preview>--enable-preview</java.enable.preview>
         <grpc.version>1.27.0</grpc.version>
         <protobuf.version>3.0.0-beta-1</protobuf.version>
+        <armeria.version>0.98.2</armeria.version>
 
         <os-maven-plugin.version>1.6.2</os-maven-plugin.version>
     </properties>
@@ -53,8 +54,34 @@
                 <artifactId>protobuf-java</artifactId>
                 <version>${protobuf.version}</version>
             </dependency>
+
+            <!-- armeria -->
+            <dependency>
+                <groupId>com.linecorp.armeria</groupId>
+                <artifactId>armeria</artifactId>
+                <version>${armeria.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.linecorp.armeria</groupId>
+                <artifactId>armeria-grpc</artifactId>
+                <version>${armeria.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.linecorp.armeria</groupId>
+            <artifactId>armeria</artifactId>
+            <version>${armeria.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.linecorp.armeria</groupId>
+            <artifactId>armeria-grpc</artifactId>
+            <version>${armeria.version}</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
